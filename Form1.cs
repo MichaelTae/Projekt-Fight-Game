@@ -15,6 +15,8 @@ namespace Projekt_Fight_Game
         public Form1()
         {
             InitializeComponent();
+
+            Console.WriteLine("hej");
         }
 
     }
