@@ -16,7 +16,32 @@ namespace Projekt_Fight_Game
         {
             InitializeComponent();
             Console.WriteLine("hej");
+
+            //Test kod kommer flyttas ----------------------------------------------------
+            var builder = new Weaponbuilder();
+             
+            BuildStandardSword(builder.setBlade("standard"));
+            builder.build().Blade.ToString();
+
+            var blade = builder.build().Blade;
+            
+            
+            MessageBox.Show(builder.build().Blade + builder.build().Hilt);
+
+            
         }
+
+        
+        public void BuildStandardSword(IWeaponBuilder standardBuilder)
+        {
+
+
+            standardBuilder.setBlade("Standard").setEnchantment("none").setHilt("standard").setPommel("round").setSize("standard");
+
+
+        }
+
+        //-----------------------------------------------------------------------------
 
     }
 }
