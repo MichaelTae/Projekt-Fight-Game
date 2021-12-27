@@ -10,7 +10,7 @@ namespace Projekt_Fight_Game
     {
         public string AttackDesc()
         {
-            return "blabla";
+            return "Attacks with the huge intellect of a mage";
         }
 
         public int AttackDamage()

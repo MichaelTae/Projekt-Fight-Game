@@ -23,20 +23,12 @@ namespace Projekt_Fight_Game
             return Enemies.AttackDamage() + 40;
         }
 
-        public override int Head()
+        public override int Health()
         {
-            return 10;
+            return 50;
         }
 
-        public override int Torso()
-        {
-            return 30;
-        }
 
-        public override int Legs()
-        {
-            return 15;
-        }
 
 
     }

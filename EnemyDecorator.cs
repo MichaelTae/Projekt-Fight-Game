@@ -20,11 +20,9 @@ namespace Projekt_Fight_Game
 
         public abstract int AttackDamage();
 
-        public abstract int Head();
+        public abstract int Health();
 
-        public abstract int Torso();
 
-        public abstract int Legs();
 
 
     }

@@ -10,7 +10,7 @@ namespace Projekt_Fight_Game
     {
         public string AttackDesc()
         {
-            return "blabla";
+            return "Attacks with the raw strength of a warrior";
         }
 
         public int AttackDamage()

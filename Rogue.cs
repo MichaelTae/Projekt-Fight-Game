@@ -17,7 +17,7 @@ namespace Projekt_Fight_Game
 
         public override string AttackDesc()
         {
-            return Enemies.AttackDesc() + "with the added benefit of tricky a rogue";
+            return Enemies.AttackDesc() + "with the added benefit of a tricky rogue";
         }
 
         public override int AttackDamage()
@@ -25,19 +25,11 @@ namespace Projekt_Fight_Game
             return Enemies.AttackDamage() + 40;
         }
 
-        public override int Head()
+        public override int Health()
         {
-            return 20;
+            return 80;
         }
 
-        public override int Torso()
-        {
-            return 20;
-        }
 
-        public override int Legs()
-        {
-            return 20;
-        }
     }
 }

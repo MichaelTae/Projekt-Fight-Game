@@ -15,6 +15,12 @@ namespace Projekt_Fight_Game
         public Form1()
         {
             InitializeComponent();
+
+            Enemies enemies = new Priest(new Thief(new Warrior()));
+
+
+            MessageBox.Show(enemies.AttackDesc());
+
             Console.WriteLine("hej");
         }
 

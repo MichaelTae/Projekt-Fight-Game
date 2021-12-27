@@ -16,7 +16,7 @@ namespace Projekt_Fight_Game
 
         public override string AttackDesc()
         {
-            return Enemies.AttackDesc() + "blabla";
+            return Enemies.AttackDesc() + "empowered with the thiefs streetsmart intellect";
         }
 
         public override int AttackDamage()
@@ -25,19 +25,11 @@ namespace Projekt_Fight_Game
         }
 
         
-        public override int Head()
+        public override int Health()
         {
-            return 10;
+            return 70;
         }
 
-        public override int Torso()
-        {
-            return 20;
-        }
 
-        public override int Legs()
-        {
-            return 30;
-        }
     }
 }
