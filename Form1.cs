@@ -21,33 +21,26 @@ namespace Projekt_Fight_Game
 
             MessageBox.Show(enemies.AttackDesc());
 
-            Console.WriteLine("hej");
+            
 
             //Test kod kommer flyttas ----------------------------------------------------
             var builder = new Weaponbuilder();
-             
-            BuildStandardSword(builder.setBlade("standard"));
+            var WP = new WeaponPattern();
+            WP.BuildStandardSword(builder);
             builder.build().Blade.ToString();
-
-            var blade = builder.build().Blade;
-            
-            
             MessageBox.Show(builder.build().Blade + builder.build().Hilt);
+            
+            WP.ArtifactSpear(builder);
+            builder.build();
+            MessageBox.Show(builder.build().Blade + " " + builder.build().Enchantment + " " + builder.build().Size);
+            
+           
 
             
         }
 
         
-        public void BuildStandardSword(IWeaponBuilder standardBuilder)
-        {
-
-
-            standardBuilder.setBlade("Standard").setEnchantment("none").setHilt("standard").setPommel("round").setSize("standard");
-
-
-        }
-
-        //-----------------------------------------------------------------------------
+       
 
     }
 }
