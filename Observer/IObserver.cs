@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Projekt_Fight_Game.Observer
 {
-    public class GameTime : ISubscriberWatcher<SubscriberAlarm>
+    public interface IObserver
     {
-        public void Alert(SubscriberAlarm value)
-        {
-            
-        }
-
-
+        void Update(Subject subject);
     }
 }

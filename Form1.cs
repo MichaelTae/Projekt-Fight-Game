@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_Fight_Game.Observer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +17,19 @@ namespace Projekt_Fight_Game
         {
             InitializeComponent();
 
+            var subject = new Subject();
+            var observerA = new Subscriber();
+            subject.Attach(observerA);
+            subject.State = 0;
+            subject.Notify();
+
+
             Enemies enemies = new Priest(new Thief(new Warrior()));
 
 
             MessageBox.Show(enemies.AttackDesc());
 
-            
+
 
             //Test kod kommer flyttas ----------------------------------------------------
             var builder = new Weaponbuilder();
@@ -29,18 +37,23 @@ namespace Projekt_Fight_Game
             WP.BuildStandardSword(builder);
             builder.build().Blade.ToString();
             MessageBox.Show(builder.build().Blade + builder.build().Hilt);
-            
+
             WP.ArtifactSpear(builder);
             builder.build();
             MessageBox.Show(builder.build().Blade + " " + builder.build().Enchantment + " " + builder.build().Size);
-            
-           
 
-            
+
+
+
         }
 
         
        
 
     }
+
+    
+
 }
+
+
