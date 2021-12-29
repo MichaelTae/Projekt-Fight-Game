@@ -24,10 +24,11 @@ namespace Projekt_Fight_Game
             subject.Notify();
 
 
-            Enemies enemies = new Priest(new Thief(new Warrior()));
+            Enemies enemies = randomizeEnemy();
 
 
             MessageBox.Show(enemies.AttackDesc());
+            MessageBox.Show(Convert.ToString(enemies.AttackDamage()));
 
 
 
@@ -48,7 +49,109 @@ namespace Projekt_Fight_Game
         }
 
         
-       
+       public Enemies randomizeEnemy()
+        {
+            Random subClassRandom = new Random();
+            Random mainClassRnd = new Random();
+            Enemies standardEnemies = new Warrior();
+            int myMainClass;
+            int mySubClass;
+
+            int rndNmbr = subClassRandom.Next(0,3);
+
+            for (int i = 0; i < rndNmbr; i++)
+            {
+                if (rndNmbr == 0)
+                {
+
+                    
+                    myMainClass =mainClassRnd.Next(0, 1);
+                    
+
+                        if (myMainClass == 1)
+                    {
+                        Enemies enemies = new Warrior();
+                        return enemies;
+                    }
+                        else if(myMainClass == 0)
+                        {
+                        Enemies enemies = new Mage();
+                        return enemies;
+                        }
+                    
+                }
+
+                else if (rndNmbr > 0)
+                {
+                    myMainClass = mainClassRnd.Next(0, 1);
+                    mySubClass = subClassRandom.Next(0, 3);
+
+                    if (myMainClass == 1)
+                    {
+                        
+                       if (mySubClass == 0)
+                        {
+                            Enemies enemies = new Priest(new Warrior());
+                            return enemies;
+                        }
+                      else if ( mySubClass == 1)
+                        {
+                            Enemies enemies = new Marauder(new Warrior());
+                            return enemies;
+                        }
+
+                       else if (mySubClass == 2)
+                        {
+                            Enemies enemies = new Thief(new Warrior());
+                            return enemies;
+                        }
+
+                        else if (mySubClass == 4)
+                        {
+                            Enemies enemies = new Rogue(new Warrior());
+                            return enemies;
+                        }
+                    }
+
+                    else if (myMainClass == 0)
+                        {
+
+                        if (mySubClass == 0)
+                        {
+                            Enemies enemies = new Priest(new Mage());
+                            return enemies;
+                        }
+                        else if (mySubClass == 1)
+                        {
+                            Enemies enemies = new Marauder(new Mage());
+                            return enemies;
+                        }
+
+                        else if (mySubClass == 2)
+                        {
+                            Enemies enemies = new Thief(new Mage());
+                            return enemies;
+                        }
+
+                        else if (mySubClass == 4)
+                        {
+                            Enemies enemies = new Rogue(new Mage());
+                            return enemies;
+                        }
+
+                   
+
+                    }
+              
+                }
+
+            
+
+            }
+
+
+            return standardEnemies;
+        }
 
     }
 
