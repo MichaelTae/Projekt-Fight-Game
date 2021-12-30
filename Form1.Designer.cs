@@ -29,149 +29,231 @@ namespace Projekt_Fight_Game
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassWord = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtCharName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btn_F1_Login = new System.Windows.Forms.Button();
+            this.txt_F1_Username = new System.Windows.Forms.TextBox();
+            this.txt_F1_PassWord = new System.Windows.Forms.TextBox();
+            this.lbl_F1_Username = new System.Windows.Forms.Label();
+            this.lbl_F1_Password = new System.Windows.Forms.Label();
+            this.txt_F1CharName = new System.Windows.Forms.TextBox();
+            this.lbl_F1CharName = new System.Windows.Forms.Label();
+            this.cbo_F1Gender = new System.Windows.Forms.ComboBox();
+            this.cbo_F1CharClass = new System.Windows.Forms.ComboBox();
+            this.lbl_F1Gender = new System.Windows.Forms.Label();
+            this.lbl_F1CharClass = new System.Windows.Forms.Label();
+            this.btn_F1CreateChar = new System.Windows.Forms.Button();
+            this.lbl_F1_SignUp = new System.Windows.Forms.Label();
+            this.lbl_F1_Header = new System.Windows.Forms.Label();
+            this.lbl_F1_LoggedInAs = new System.Windows.Forms.Label();
+            this.txt_F1_LoggedInAs = new System.Windows.Forms.TextBox();
+            this.btn_F1_Logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnLogin
+            // btn_F1_Login
             // 
-            this.btnLogin.Location = new System.Drawing.Point(12, 80);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(118, 34);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btn_F1_Login.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_F1_Login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_F1_Login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_F1_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_F1_Login.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_F1_Login.Location = new System.Drawing.Point(1046, 20);
+            this.btn_F1_Login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_F1_Login.Name = "btn_F1_Login";
+            this.btn_F1_Login.Size = new System.Drawing.Size(74, 31);
+            this.btn_F1_Login.TabIndex = 0;
+            this.btn_F1_Login.Text = "Login";
+            this.btn_F1_Login.UseVisualStyleBackColor = false;
+            this.btn_F1_Login.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtUserName
+            // txt_F1_Username
             // 
-            this.txtUserName.Location = new System.Drawing.Point(12, 43);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(150, 31);
-            this.txtUserName.TabIndex = 1;
+            this.txt_F1_Username.Location = new System.Drawing.Point(697, 25);
+            this.txt_F1_Username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_F1_Username.Name = "txt_F1_Username";
+            this.txt_F1_Username.Size = new System.Drawing.Size(169, 23);
+            this.txt_F1_Username.TabIndex = 1;
             // 
-            // txtPassWord
+            // txt_F1_PassWord
             // 
-            this.txtPassWord.Location = new System.Drawing.Point(168, 43);
-            this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(150, 31);
-            this.txtPassWord.TabIndex = 2;
+            this.txt_F1_PassWord.Location = new System.Drawing.Point(870, 25);
+            this.txt_F1_PassWord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_F1_PassWord.Name = "txt_F1_PassWord";
+            this.txt_F1_PassWord.Size = new System.Drawing.Size(169, 23);
+            this.txt_F1_PassWord.TabIndex = 2;
             // 
-            // label1
+            // lbl_F1_Username
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "User Name";
+            this.lbl_F1_Username.AutoSize = true;
+            this.lbl_F1_Username.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_F1_Username.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_F1_Username.Location = new System.Drawing.Point(697, 9);
+            this.lbl_F1_Username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_F1_Username.Name = "lbl_F1_Username";
+            this.lbl_F1_Username.Size = new System.Drawing.Size(60, 15);
+            this.lbl_F1_Username.TabIndex = 3;
+            this.lbl_F1_Username.Text = "Username";
             // 
-            // label2
+            // lbl_F1_Password
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(168, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
+            this.lbl_F1_Password.AutoSize = true;
+            this.lbl_F1_Password.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_F1_Password.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_F1_Password.Location = new System.Drawing.Point(870, 9);
+            this.lbl_F1_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_F1_Password.Name = "lbl_F1_Password";
+            this.lbl_F1_Password.Size = new System.Drawing.Size(57, 15);
+            this.lbl_F1_Password.TabIndex = 4;
+            this.lbl_F1_Password.Text = "Password";
             // 
-            // txtCharName
+            // txt_F1CharName
             // 
-            this.txtCharName.Location = new System.Drawing.Point(12, 264);
-            this.txtCharName.Name = "txtCharName";
-            this.txtCharName.Size = new System.Drawing.Size(150, 31);
-            this.txtCharName.TabIndex = 5;
+            this.txt_F1CharName.Location = new System.Drawing.Point(27, 420);
+            this.txt_F1CharName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_F1CharName.Name = "txt_F1CharName";
+            this.txt_F1CharName.Size = new System.Drawing.Size(106, 23);
+            this.txt_F1CharName.TabIndex = 5;
             // 
-            // label3
+            // lbl_F1CharName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Character Name";
+            this.lbl_F1CharName.AutoSize = true;
+            this.lbl_F1CharName.Location = new System.Drawing.Point(27, 398);
+            this.lbl_F1CharName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_F1CharName.Name = "lbl_F1CharName";
+            this.lbl_F1CharName.Size = new System.Drawing.Size(93, 15);
+            this.lbl_F1CharName.TabIndex = 6;
+            this.lbl_F1CharName.Text = "Character Name";
             // 
-            // comboBox1
+            // cbo_F1Gender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 326);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(182, 33);
-            this.comboBox1.TabIndex = 7;
+            this.cbo_F1Gender.FormattingEnabled = true;
+            this.cbo_F1Gender.Location = new System.Drawing.Point(28, 462);
+            this.cbo_F1Gender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbo_F1Gender.Name = "cbo_F1Gender";
+            this.cbo_F1Gender.Size = new System.Drawing.Size(129, 23);
+            this.cbo_F1Gender.TabIndex = 7;
             // 
-            // comboBox2
+            // cbo_F1CharClass
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(12, 394);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(182, 33);
-            this.comboBox2.TabIndex = 8;
+            this.cbo_F1CharClass.FormattingEnabled = true;
+            this.cbo_F1CharClass.Location = new System.Drawing.Point(28, 502);
+            this.cbo_F1CharClass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbo_F1CharClass.Name = "cbo_F1CharClass";
+            this.cbo_F1CharClass.Size = new System.Drawing.Size(129, 23);
+            this.cbo_F1CharClass.TabIndex = 8;
             // 
-            // label4
+            // lbl_F1Gender
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 298);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 25);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Gender";
+            this.lbl_F1Gender.AutoSize = true;
+            this.lbl_F1Gender.Location = new System.Drawing.Point(28, 445);
+            this.lbl_F1Gender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_F1Gender.Name = "lbl_F1Gender";
+            this.lbl_F1Gender.Size = new System.Drawing.Size(45, 15);
+            this.lbl_F1Gender.TabIndex = 9;
+            this.lbl_F1Gender.Text = "Gender";
             // 
-            // label5
+            // lbl_F1CharClass
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 366);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Character";
+            this.lbl_F1CharClass.AutoSize = true;
+            this.lbl_F1CharClass.Location = new System.Drawing.Point(29, 486);
+            this.lbl_F1CharClass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_F1CharClass.Name = "lbl_F1CharClass";
+            this.lbl_F1CharClass.Size = new System.Drawing.Size(58, 15);
+            this.lbl_F1CharClass.TabIndex = 10;
+            this.lbl_F1CharClass.Text = "Character";
             // 
-            // button1
+            // btn_F1CreateChar
             // 
-            this.button1.Location = new System.Drawing.Point(13, 179);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 34);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Create character";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_F1CreateChar.Location = new System.Drawing.Point(27, 363);
+            this.btn_F1CreateChar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_F1CreateChar.Name = "btn_F1CreateChar";
+            this.btn_F1CreateChar.Size = new System.Drawing.Size(105, 22);
+            this.btn_F1CreateChar.TabIndex = 11;
+            this.btn_F1CreateChar.Text = "Create character";
+            this.btn_F1CreateChar.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lbl_F1_SignUp
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(324, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(237, 25);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "New member? Sign up here!";
+            this.lbl_F1_SignUp.AutoSize = true;
+            this.lbl_F1_SignUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_F1_SignUp.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_F1_SignUp.Location = new System.Drawing.Point(883, 50);
+            this.lbl_F1_SignUp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_F1_SignUp.Name = "lbl_F1_SignUp";
+            this.lbl_F1_SignUp.Size = new System.Drawing.Size(156, 15);
+            this.lbl_F1_SignUp.TabIndex = 12;
+            this.lbl_F1_SignUp.Text = "New member? Sign up here!";
+            // 
+            // lbl_F1_Header
+            // 
+            this.lbl_F1_Header.AutoSize = true;
+            this.lbl_F1_Header.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_F1_Header.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_F1_Header.ForeColor = System.Drawing.Color.Gold;
+            this.lbl_F1_Header.Location = new System.Drawing.Point(434, 81);
+            this.lbl_F1_Header.Name = "lbl_F1_Header";
+            this.lbl_F1_Header.Size = new System.Drawing.Size(221, 50);
+            this.lbl_F1_Header.TabIndex = 13;
+            this.lbl_F1_Header.Text = "Fight Game";
+            // 
+            // lbl_F1_LoggedInAs
+            // 
+            this.lbl_F1_LoggedInAs.AutoSize = true;
+            this.lbl_F1_LoggedInAs.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_F1_LoggedInAs.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbl_F1_LoggedInAs.Location = new System.Drawing.Point(11, 9);
+            this.lbl_F1_LoggedInAs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_F1_LoggedInAs.Name = "lbl_F1_LoggedInAs";
+            this.lbl_F1_LoggedInAs.Size = new System.Drawing.Size(74, 15);
+            this.lbl_F1_LoggedInAs.TabIndex = 14;
+            this.lbl_F1_LoggedInAs.Text = "Logged in as";
+            // 
+            // txt_F1_LoggedInAs
+            // 
+            this.txt_F1_LoggedInAs.Location = new System.Drawing.Point(11, 25);
+            this.txt_F1_LoggedInAs.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_F1_LoggedInAs.Name = "txt_F1_LoggedInAs";
+            this.txt_F1_LoggedInAs.Size = new System.Drawing.Size(169, 23);
+            this.txt_F1_LoggedInAs.TabIndex = 15;
+            // 
+            // btn_F1_Logout
+            // 
+            this.btn_F1_Logout.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_F1_Logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_F1_Logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_F1_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_F1_Logout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_F1_Logout.Location = new System.Drawing.Point(184, 20);
+            this.btn_F1_Logout.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_F1_Logout.Name = "btn_F1_Logout";
+            this.btn_F1_Logout.Size = new System.Drawing.Size(74, 31);
+            this.btn_F1_Logout.TabIndex = 16;
+            this.btn_F1_Logout.Text = "Logout";
+            this.btn_F1_Logout.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 451);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCharName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPassWord);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.btnLogin);
+            this.BackgroundImage = global::Projekt_Fight_Game.Properties.Resources.Form1Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1134, 611);
+            this.Controls.Add(this.btn_F1_Logout);
+            this.Controls.Add(this.txt_F1_LoggedInAs);
+            this.Controls.Add(this.lbl_F1_LoggedInAs);
+            this.Controls.Add(this.lbl_F1_Header);
+            this.Controls.Add(this.lbl_F1_SignUp);
+            this.Controls.Add(this.btn_F1CreateChar);
+            this.Controls.Add(this.lbl_F1CharClass);
+            this.Controls.Add(this.lbl_F1Gender);
+            this.Controls.Add(this.cbo_F1CharClass);
+            this.Controls.Add(this.cbo_F1Gender);
+            this.Controls.Add(this.lbl_F1CharName);
+            this.Controls.Add(this.txt_F1CharName);
+            this.Controls.Add(this.lbl_F1_Password);
+            this.Controls.Add(this.lbl_F1_Username);
+            this.Controls.Add(this.txt_F1_PassWord);
+            this.Controls.Add(this.txt_F1_Username);
+            this.Controls.Add(this.btn_F1_Login);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -181,19 +263,23 @@ namespace Projekt_Fight_Game
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtPassWord;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCharName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btn_F1_Login;
+        private System.Windows.Forms.TextBox txt_F1_Username;
+        private System.Windows.Forms.TextBox txt_F1_PassWord;
+        private System.Windows.Forms.Label lbl_F1_Username;
+        private System.Windows.Forms.Label lbl_F1_Password;
+        private System.Windows.Forms.TextBox txt_F1CharName;
+        private System.Windows.Forms.Label lbl_F1CharName;
+        private System.Windows.Forms.ComboBox cbo_F1Gender;
+        private System.Windows.Forms.ComboBox cbo_F1CharClass;
+        private System.Windows.Forms.Label lbl_F1Gender;
+        private System.Windows.Forms.Label lbl_F1CharClass;
+        private System.Windows.Forms.Button btn_F1CreateChar;
+        private System.Windows.Forms.Label lbl_F1_SignUp;
+        private System.Windows.Forms.Label lbl_F1_Header;
+        private System.Windows.Forms.Label lbl_F1_LoggedInAs;
+        private System.Windows.Forms.TextBox txt_F1_LoggedInAs;
+        private System.Windows.Forms.Button btn_F1_Logout;
     }
 }
 
