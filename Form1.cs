@@ -27,8 +27,8 @@ namespace Projekt_Fight_Game
             Enemies enemies = randomizeEnemy();
 
 
-            MessageBox.Show(enemies.AttackDesc());
-            MessageBox.Show(Convert.ToString(enemies.AttackDamage()));
+            //MessageBox.Show(enemies.AttackDesc());
+            // MessageBox.Show(Convert.ToString(enemies.AttackDamage()));
 
 
 
@@ -37,19 +37,19 @@ namespace Projekt_Fight_Game
             var WP = new WeaponPattern();
             WP.BuildStandardSword(builder);
             builder.build().Blade.ToString();
-            MessageBox.Show(builder.build().Blade + builder.build().Hilt);
+            //MessageBox.Show(builder.build().Blade + builder.build().Hilt);
 
             WP.ArtifactSpear(builder);
             builder.build();
-            MessageBox.Show(builder.build().Blade + " " + builder.build().Enchantment + " " + builder.build().Size);
+            //MessageBox.Show(builder.build().Blade + " " + builder.build().Enchantment + " " + builder.build().Size);
 
 
 
 
         }
 
-        
-       public Enemies randomizeEnemy()
+
+        public Enemies randomizeEnemy()
         {
             Random subClassRandom = new Random();
             Random mainClassRnd = new Random();
@@ -68,16 +68,16 @@ namespace Projekt_Fight_Game
                     myMainClass =mainClassRnd.Next(0, 1);
                     
 
-                        if (myMainClass == 1)
+                    if (myMainClass == 1)
                     {
                         Enemies enemies = new Warrior();
                         return enemies;
                     }
-                        else if(myMainClass == 0)
-                        {
+                    else if(myMainClass == 0)
+                    {
                         Enemies enemies = new Mage();
                         return enemies;
-                        }
+                    }
                     
                 }
 
@@ -89,18 +89,18 @@ namespace Projekt_Fight_Game
                     if (myMainClass == 1)
                     {
                         
-                       if (mySubClass == 0)
+                        if (mySubClass == 0)
                         {
                             Enemies enemies = new Priest(new Warrior());
                             return enemies;
                         }
-                      else if ( mySubClass == 1)
+                        else if ( mySubClass == 1)
                         {
                             Enemies enemies = new Marauder(new Warrior());
                             return enemies;
                         }
 
-                       else if (mySubClass == 2)
+                        else if (mySubClass == 2)
                         {
                             Enemies enemies = new Thief(new Warrior());
                             return enemies;
@@ -153,9 +153,19 @@ namespace Projekt_Fight_Game
             return standardEnemies;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
 
+
+        private void btn_F1_MyPage_Click(object sender, EventArgs e)
+        {
+            UserAccountPage userAccountPage = new UserAccountPage();
+            this.Hide();
+            userAccountPage.Show();
+        }
+
+        private void lbl_F1_SignUp_Click(object sender, EventArgs e)
+        {
+            CreateNewUser createNewUser = new CreateNewUser();
+            createNewUser.Show();
         }
     }
 
