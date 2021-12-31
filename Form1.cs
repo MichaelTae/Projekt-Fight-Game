@@ -16,6 +16,7 @@ namespace Projekt_Fight_Game
         public Form1()
         {
             InitializeComponent();
+            NotLoggedIn();
 
             var subject = new Subject();
             var observerA = new Subscriber();
@@ -167,10 +168,37 @@ namespace Projekt_Fight_Game
             CreateNewUser createNewUser = new CreateNewUser();
             createNewUser.Show();
         }
+        private void btn_F1_Logout_Click(object sender, EventArgs e)
+        {
+            NotLoggedIn();
+            MessageBox.Show("Thank you for playing!");
+        }
+        private void NotLoggedIn()
+        {
+            lbl_F1_LoggedInAs.Visible = false;
+            txt_F1_LoggedInAs.Visible = false;
+            btn_F1_MyPage.Visible = false;
+            btn_F1_Logout.Visible = false;
+            txt_F1_Username.Text = "";
+            txt_F1_Password.Text = "";
+        }
+
+        private void LoggedIn()
+        {
+            lbl_F1_LoggedInAs.Visible = true;
+            txt_F1_LoggedInAs.Visible = true;
+            btn_F1_MyPage.Visible = true;
+            btn_F1_Logout.Visible = true;
+            lbl_F1_SignUp.Visible = false;
+            lbl_F1_Username.Visible = false;
+            lbl_F1_Password.Visible = false;
+            txt_F1_Username.Visible = false;
+            txt_F1_Password.Visible = false;
+            btn_F1_Login.Visible = false;
+        }
+
+        
     }
-
-    
-
 }
 
 
