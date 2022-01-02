@@ -25,7 +25,7 @@ namespace Projekt_Fight_Game
             subject.Notify();
 
 
-            IEnemies enemies = randomizeEnemy();
+            IEnemies enemies = RandomizeEnemy();
 
 
             //MessageBox.Show(enemies.AttackDesc());
@@ -50,7 +50,7 @@ namespace Projekt_Fight_Game
         }
 
 
-        public IEnemies randomizeEnemy()
+        public IEnemies RandomizeEnemy()
         {
             Random subClassRandom = new Random();
             Random mainClassRnd = new Random();

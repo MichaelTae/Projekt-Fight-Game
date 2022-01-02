@@ -16,7 +16,7 @@ namespace Projekt_Fight_Game
 
         public override string AttackDesc()
         {
-            return Enemies.AttackDesc() + "blabla";
+            return Enemies.AttackDesc() + "with the unyielding power of a marauder";
         }
 
         public override int AttackDamage()
@@ -25,7 +25,7 @@ namespace Projekt_Fight_Game
         }
         public override int Health()
         {
-            return 45;
+            return 120;
         }
 
 

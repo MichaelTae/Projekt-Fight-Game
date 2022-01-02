@@ -27,7 +27,7 @@ namespace Projekt_Fight_Game
 
         public override int Health()
         {
-            return 80;
+            return 105;
         }
 
 
