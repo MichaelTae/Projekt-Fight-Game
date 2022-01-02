@@ -64,5 +64,9 @@ namespace Projekt_Fight_Game
             return checkedInfo;
         }
 
+        private void btn_CNU_Back_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
