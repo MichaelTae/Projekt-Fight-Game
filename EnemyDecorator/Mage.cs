@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_Fight_Game
 {
-    public class Mage : Enemies
+    public class Mage : IEnemies
     {
         public string AttackDesc()
         {

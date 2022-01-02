@@ -9,7 +9,7 @@ namespace Projekt_Fight_Game
    public class Marauder: EnemyDecorator
     {
 
-        public Marauder(Enemies enemies) : base(enemies)
+        public Marauder(IEnemies enemies) : base(enemies)
         {
 
         }

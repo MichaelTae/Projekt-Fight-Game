@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_Fight_Game
 {
-    public interface Enemies
+    public interface IEnemies
     {
 
         public string AttackDesc();

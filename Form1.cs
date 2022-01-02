@@ -25,7 +25,7 @@ namespace Projekt_Fight_Game
             subject.Notify();
 
 
-            Enemies enemies = randomizeEnemy();
+            IEnemies enemies = randomizeEnemy();
 
 
             //MessageBox.Show(enemies.AttackDesc());
@@ -50,11 +50,11 @@ namespace Projekt_Fight_Game
         }
 
 
-        public Enemies randomizeEnemy()
+        public IEnemies randomizeEnemy()
         {
             Random subClassRandom = new Random();
             Random mainClassRnd = new Random();
-            Enemies standardEnemies = new Warrior();
+            IEnemies standardEnemies = new Warrior();
             int myMainClass;
             int mySubClass;
 
@@ -71,12 +71,12 @@ namespace Projekt_Fight_Game
 
                     if (myMainClass == 1)
                     {
-                        Enemies enemies = new Warrior();
+                        IEnemies enemies = new Warrior();
                         return enemies;
                     }
                     else if(myMainClass == 0)
                     {
-                        Enemies enemies = new Mage();
+                        IEnemies enemies = new Mage();
                         return enemies;
                     }
                     
@@ -92,24 +92,24 @@ namespace Projekt_Fight_Game
                         
                         if (mySubClass == 0)
                         {
-                            Enemies enemies = new Priest(new Warrior());
+                            IEnemies enemies = new Priest(new Warrior());
                             return enemies;
                         }
                         else if ( mySubClass == 1)
                         {
-                            Enemies enemies = new Marauder(new Warrior());
+                            IEnemies enemies = new Marauder(new Warrior());
                             return enemies;
                         }
 
                         else if (mySubClass == 2)
                         {
-                            Enemies enemies = new Thief(new Warrior());
+                            IEnemies enemies = new Thief(new Warrior());
                             return enemies;
                         }
 
                         else if (mySubClass == 4)
                         {
-                            Enemies enemies = new Rogue(new Warrior());
+                            IEnemies enemies = new Rogue(new Warrior());
                             return enemies;
                         }
                     }
@@ -119,24 +119,24 @@ namespace Projekt_Fight_Game
 
                         if (mySubClass == 0)
                         {
-                            Enemies enemies = new Priest(new Mage());
+                            IEnemies enemies = new Priest(new Mage());
                             return enemies;
                         }
                         else if (mySubClass == 1)
                         {
-                            Enemies enemies = new Marauder(new Mage());
+                            IEnemies enemies = new Marauder(new Mage());
                             return enemies;
                         }
 
                         else if (mySubClass == 2)
                         {
-                            Enemies enemies = new Thief(new Mage());
+                            IEnemies enemies = new Thief(new Mage());
                             return enemies;
                         }
 
                         else if (mySubClass == 4)
                         {
-                            Enemies enemies = new Rogue(new Mage());
+                            IEnemies enemies = new Rogue(new Mage());
                             return enemies;
                         }
 

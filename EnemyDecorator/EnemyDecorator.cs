@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Projekt_Fight_Game
 {
-    public abstract class EnemyDecorator : Enemies
+    public abstract class EnemyDecorator : IEnemies
     {
 
-        public Enemies Enemies;
+        public IEnemies Enemies;
 
-        protected EnemyDecorator(Enemies enemies)
+        protected EnemyDecorator(IEnemies enemies)
         {
             Enemies = enemies;
         }

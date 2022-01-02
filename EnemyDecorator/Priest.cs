@@ -8,7 +8,7 @@ namespace Projekt_Fight_Game
 {
    public class Priest:EnemyDecorator
     {
-        public Priest(Enemies enemies) : base(enemies)
+        public Priest(IEnemies enemies) : base(enemies)
         {
 
         }

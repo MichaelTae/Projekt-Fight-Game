@@ -9,7 +9,7 @@ namespace Projekt_Fight_Game
     public class Rogue: EnemyDecorator
     {
 
-        public Rogue(Enemies enemies) : base(enemies)
+        public Rogue(IEnemies enemies) : base(enemies)
         {
 
         }
