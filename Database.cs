@@ -8,15 +8,28 @@ namespace Projekt_Fight_Game
 {
     class SingletonDB
     {
-        //private static sqlConnection Con;
-        //private SingletonDB()
-        //{
+        
+         /* private static SingletonDB dbInstance;
+            private readonly SqlConnection conn = new SqlConnection(@"");
 
-        //}
-        //public static sqlConnection GetConnection()
-        //{
-            //Con = new sqlConnection();
-            //return Con;
-        //}
+            private SingletonDB() //konstruktor
+            {
+            }
+
+            public static SingletonDB getDbInstance()
+            {
+                if (dbInstance == null)
+                {
+                    dbInstance = new ConnSingleton();
+                }
+                return dbInstance;
+            }
+
+            public SqlConnection GetDBConnection()
+            {
+                
+            } */
+
+        
     }
 }
