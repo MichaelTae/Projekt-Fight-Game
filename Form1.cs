@@ -25,24 +25,11 @@ namespace Projekt_Fight_Game
             subject.Notify();
 
 
-
-            //MessageBox.Show(enemies.AttackDesc());
-            // MessageBox.Show(Convert.ToString(enemies.AttackDamage()));
-
-
-
-            //Test kod kommer flyttas ----------------------------------------------------
-            var builder = new Weaponbuilder();
-            var WP = new WeaponPattern();
-            WP.BuildStandardSword(builder);
-            builder.build().Blade.ToString();
-            //MessageBox.Show(builder.build().Blade + builder.build().Hilt);
-
-            WP.ArtifactSpear(builder);
-            builder.build();
-            //MessageBox.Show(builder.build().Blade + " " + builder.build().Enchantment + " " + builder.build().Size);
-
-
+           
+            IEnemies enemies = RandomizeEnemy();
+            string health = enemies.Health().ToString();
+            lbl_F1_EnemyHealth100.Text = health;
+            txt_F1_EnemyHealth.Text = health;
 
 
         }
