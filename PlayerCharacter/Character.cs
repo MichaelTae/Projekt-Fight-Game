@@ -12,5 +12,8 @@ namespace Projekt_Fight_Game
 
         public string Gender();
 
+        public int AttackDamage();
+        public int Health();
+        public string AttackDesc();
     }
 }

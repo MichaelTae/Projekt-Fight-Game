@@ -17,5 +17,20 @@ namespace Projekt_Fight_Game
         {
             return "Male";
         }
+
+        public int AttackDamage()
+        {
+            return 35;
+        }
+
+        public int Health()
+        {
+            return 200;
+        }
+
+        public string AttackDesc()
+        {
+            return "Dealing damage for ";
+        }
     }
 }

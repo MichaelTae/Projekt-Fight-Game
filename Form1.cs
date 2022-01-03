@@ -13,6 +13,8 @@ namespace Projekt_Fight_Game
 {
     public partial class Form1 : Form
     {
+        Character character = new Player();
+        IEnemies enemies = RandomizeEnemy();
         public Form1()
         {
             InitializeComponent();
@@ -25,17 +27,18 @@ namespace Projekt_Fight_Game
             subject.Notify();
 
 
-           
+            
             IEnemies enemies = RandomizeEnemy();
             string health = enemies.Health().ToString();
             lbl_F1_EnemyHealth100.Text = health;
             txt_F1_EnemyHealth.Text = health;
-
+            txt_F1_UserCharHealth.Text = character.Health().ToString();
+            lbl_F1_UserCharHealth100.Text = character.Health().ToString();
 
         }
 
 
-        public IEnemies RandomizeEnemy()
+        public static IEnemies RandomizeEnemy()
         {
             Random subClassRandom = new Random();
             Random mainClassRnd = new Random();
@@ -182,7 +185,63 @@ namespace Projekt_Fight_Game
             btn_F1_Login.Visible = false;
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int enemyHealth = Convert.ToInt32(txt_F1_EnemyHealth.Text);
+            int myHealth = Convert.ToInt32(txt_F1_UserCharHealth.Text);
+            enemyHealth -= character.AttackDamage();
+            myHealth -= enemies.AttackDamage();
+            txt_F1_EnemyHealth.Text = enemyHealth.ToString();
+            txt_F1_UserCharHealth.Text = myHealth.ToString();
+            
+
+            lbx_F1.Items.Add(character.AttackDesc() + character.AttackDamage());
+            lbx_F1.Items.Add(enemies.AttackDesc() + "for" + enemies.AttackDamage() );
+
+           
+
+
+            if (Convert.ToInt32(txt_F1_EnemyHealth.Text) <= 0)
+            {
+                lbx_F1.Items.Add("You Win, next enemy coming up!");
+
+                IEnemies enemies = RandomizeEnemy();
+                string health = enemies.Health().ToString();
+                lbl_F1_EnemyHealth100.Text = health;
+                txt_F1_EnemyHealth.Text = health;
+
+
+            }
+
+            if (Convert.ToInt32(txt_F1_UserCharHealth.Text) <= 0)
+            {
+                lbx_F1.Items.Add("You Died");
+
+                Character character = new Player();
+                IEnemies enemies = RandomizeEnemy();
+                string health = enemies.Health().ToString();
+                lbl_F1_EnemyHealth100.Text = health;
+                txt_F1_EnemyHealth.Text = health;
+                txt_F1_UserCharHealth.Text = character.Health().ToString();
+                lbl_F1_UserCharHealth100.Text = character.Health().ToString();
+
+                
+
+            }
+
+
+
+
+
+        }
+
+        private void lbx_F1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            
+        }
     }
 }
 
