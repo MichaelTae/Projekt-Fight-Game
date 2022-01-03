@@ -17,6 +17,7 @@ namespace Projekt_Fight_Game
         
         public CurrentEnemy current { get; set; }
 
+        bool isEnemyCreated = false;
 
         public Form1()
         {
@@ -191,50 +192,60 @@ namespace Projekt_Fight_Game
         private void btn_F1_Attack_Click(object sender, EventArgs e)
         {
 
-            int enemyHealth = Convert.ToInt32(txt_F1_EnemyHealth.Text);
-            int myHealth = Convert.ToInt32(txt_F1_UserCharHealth.Text);
-            enemyHealth -= character.AttackDamage();
-            myHealth -= current.AttackDamage;
-            txt_F1_EnemyHealth.Text = enemyHealth.ToString();
-            txt_F1_UserCharHealth.Text = myHealth.ToString();
-            
 
-            lbx_F1.Items.Add(character.AttackDesc() + character.AttackDamage());
-            lbx_F1.Items.Add(current.AttackDesc + "for" + current.AttackDamage);
-
-           
-
-
-            if (Convert.ToInt32(txt_F1_EnemyHealth.Text) <= 0)
+            if (isEnemyCreated)
             {
-                lbx_F1.Items.Add("You Win, next enemy coming up!");
+                int enemyHealth = Convert.ToInt32(txt_F1_EnemyHealth.Text);
+                int myHealth = Convert.ToInt32(txt_F1_UserCharHealth.Text);
+                enemyHealth -= character.AttackDamage();
+                myHealth -= current.AttackDamage;
+                txt_F1_EnemyHealth.Text = enemyHealth.ToString();
+                txt_F1_UserCharHealth.Text = myHealth.ToString();
 
-                current = RandomizeEnemy();
-                string health = current.Health.ToString();
-                lbl_F1_EnemyHealth100.Text = health;
-                txt_F1_EnemyHealth.Text = health;
-               
+
+                lbx_F1.Items.Add(character.AttackDesc() + character.AttackDamage());
+                lbx_F1.Items.Add(current.AttackDesc + "for" + current.AttackDamage);
+
+
+
+
+                if (Convert.ToInt32(txt_F1_EnemyHealth.Text) <= 0)
+                {
+                    lbx_F1.Items.Add("You Win, next enemy coming up!");
+
+                    current = RandomizeEnemy();
+                    string health = current.Health.ToString();
+                    lbl_F1_EnemyHealth100.Text = health;
+                    txt_F1_EnemyHealth.Text = health;
+
+
+                }
+
+                if (Convert.ToInt32(txt_F1_UserCharHealth.Text) <= 0)
+                {
+                    lbx_F1.Items.Add("You Died");
+
+                    Character character = new Player();
+                    current = RandomizeEnemy();
+                    string health = current.Health.ToString();
+                    lbl_F1_EnemyHealth100.Text = health;
+                    txt_F1_EnemyHealth.Text = health;
+                    txt_F1_UserCharHealth.Text = character.Health().ToString();
+                    lbl_F1_UserCharHealth100.Text = character.Health().ToString();
+                    current = RandomizeEnemy();
+
+
+                }
 
             }
 
-            if (Convert.ToInt32(txt_F1_UserCharHealth.Text) <= 0)
+            else
             {
-                lbx_F1.Items.Add("You Died");
-
-                Character character = new Player();
-                current = RandomizeEnemy();
-                string health =current.Health.ToString();
-                lbl_F1_EnemyHealth100.Text = health;
-                txt_F1_EnemyHealth.Text = health;
-                txt_F1_UserCharHealth.Text = character.Health().ToString();
-                lbl_F1_UserCharHealth100.Text = character.Health().ToString();
-                current = RandomizeEnemy();
-                
-
+                MessageBox.Show("Create enemy first");
             }
 
 
-            
+
 
 
 
@@ -249,6 +260,7 @@ namespace Projekt_Fight_Game
 
         private void btn_F1_CreateEnemy_Click(object sender, EventArgs e)
         {
+            isEnemyCreated = true;
             current = RandomizeEnemy();
             string health = current.Health.ToString();
             lbl_F1_EnemyHealth100.Text = health;
