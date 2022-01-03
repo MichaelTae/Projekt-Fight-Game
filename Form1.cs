@@ -266,6 +266,11 @@ namespace Projekt_Fight_Game
             txt_F1_UserCharHealth.Text = character.Health().ToString();
             lbl_F1_UserCharHealth100.Text = character.Health().ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

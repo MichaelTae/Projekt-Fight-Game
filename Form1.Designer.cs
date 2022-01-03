@@ -180,8 +180,10 @@ namespace Projekt_Fight_Game
             this.txt_F1_LoggedInAs.Location = new System.Drawing.Point(11, 25);
             this.txt_F1_LoggedInAs.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_LoggedInAs.Name = "txt_F1_LoggedInAs";
+            this.txt_F1_LoggedInAs.ReadOnly = true;
             this.txt_F1_LoggedInAs.Size = new System.Drawing.Size(169, 23);
             this.txt_F1_LoggedInAs.TabIndex = 15;
+            this.txt_F1_LoggedInAs.TabStop = false;
             // 
             // btn_F1_Logout
             // 
@@ -195,6 +197,7 @@ namespace Projekt_Fight_Game
             this.btn_F1_Logout.Name = "btn_F1_Logout";
             this.btn_F1_Logout.Size = new System.Drawing.Size(69, 28);
             this.btn_F1_Logout.TabIndex = 16;
+            this.btn_F1_Logout.TabStop = false;
             this.btn_F1_Logout.Text = "Logout";
             this.btn_F1_Logout.UseVisualStyleBackColor = false;
             this.btn_F1_Logout.Click += new System.EventHandler(this.btn_F1_Logout_Click);
@@ -211,6 +214,7 @@ namespace Projekt_Fight_Game
             this.btn_F1_MyPage.Name = "btn_F1_MyPage";
             this.btn_F1_MyPage.Size = new System.Drawing.Size(69, 28);
             this.btn_F1_MyPage.TabIndex = 17;
+            this.btn_F1_MyPage.TabStop = false;
             this.btn_F1_MyPage.Text = "My Page";
             this.btn_F1_MyPage.UseVisualStyleBackColor = false;
             this.btn_F1_MyPage.Click += new System.EventHandler(this.btn_F1_MyPage_Click);
@@ -302,6 +306,7 @@ namespace Projekt_Fight_Game
             this.txt_F1_UserCharClass.Location = new System.Drawing.Point(184, 386);
             this.txt_F1_UserCharClass.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_UserCharClass.Name = "txt_F1_UserCharClass";
+            this.txt_F1_UserCharClass.ReadOnly = true;
             this.txt_F1_UserCharClass.Size = new System.Drawing.Size(169, 23);
             this.txt_F1_UserCharClass.TabIndex = 24;
             this.txt_F1_UserCharClass.Text = "Priest";
@@ -350,6 +355,7 @@ namespace Projekt_Fight_Game
             this.txt_F1_UserCharGender.Location = new System.Drawing.Point(184, 439);
             this.txt_F1_UserCharGender.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_UserCharGender.Name = "txt_F1_UserCharGender";
+            this.txt_F1_UserCharGender.ReadOnly = true;
             this.txt_F1_UserCharGender.Size = new System.Drawing.Size(169, 23);
             this.txt_F1_UserCharGender.TabIndex = 28;
             this.txt_F1_UserCharGender.Text = "Female";
@@ -360,6 +366,7 @@ namespace Projekt_Fight_Game
             this.txt_F1_EnemySubClass.Location = new System.Drawing.Point(825, 439);
             this.txt_F1_EnemySubClass.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_EnemySubClass.Name = "txt_F1_EnemySubClass";
+            this.txt_F1_EnemySubClass.ReadOnly = true;
             this.txt_F1_EnemySubClass.Size = new System.Drawing.Size(169, 23);
             this.txt_F1_EnemySubClass.TabIndex = 36;
             this.txt_F1_EnemySubClass.Text = "Theif";
@@ -384,6 +391,7 @@ namespace Projekt_Fight_Game
             this.txt_F1_EnemyMainClass.Location = new System.Drawing.Point(825, 386);
             this.txt_F1_EnemyMainClass.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_EnemyMainClass.Name = "txt_F1_EnemyMainClass";
+            this.txt_F1_EnemyMainClass.ReadOnly = true;
             this.txt_F1_EnemyMainClass.Size = new System.Drawing.Size(169, 23);
             this.txt_F1_EnemyMainClass.TabIndex = 32;
             this.txt_F1_EnemyMainClass.Text = "Warrior";
@@ -422,6 +430,7 @@ namespace Projekt_Fight_Game
             this.txt_F1_EnemyName.Location = new System.Drawing.Point(825, 333);
             this.txt_F1_EnemyName.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_EnemyName.Name = "txt_F1_EnemyName";
+            this.txt_F1_EnemyName.ReadOnly = true;
             this.txt_F1_EnemyName.Size = new System.Drawing.Size(169, 23);
             this.txt_F1_EnemyName.TabIndex = 37;
             this.txt_F1_EnemyName.Text = "Dunquin";
@@ -446,6 +455,7 @@ namespace Projekt_Fight_Game
             this.txt_F1_UserCharHealth.Location = new System.Drawing.Point(80, 281);
             this.txt_F1_UserCharHealth.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_UserCharHealth.Name = "txt_F1_UserCharHealth";
+            this.txt_F1_UserCharHealth.ReadOnly = true;
             this.txt_F1_UserCharHealth.Size = new System.Drawing.Size(41, 23);
             this.txt_F1_UserCharHealth.TabIndex = 42;
             this.txt_F1_UserCharHealth.Text = "100";
@@ -501,6 +511,7 @@ namespace Projekt_Fight_Game
             this.txt_F1_EnemyHealth.Location = new System.Drawing.Point(1059, 281);
             this.txt_F1_EnemyHealth.Margin = new System.Windows.Forms.Padding(2);
             this.txt_F1_EnemyHealth.Name = "txt_F1_EnemyHealth";
+            this.txt_F1_EnemyHealth.ReadOnly = true;
             this.txt_F1_EnemyHealth.Size = new System.Drawing.Size(41, 23);
             this.txt_F1_EnemyHealth.TabIndex = 46;
             this.txt_F1_EnemyHealth.Text = "100";
@@ -582,6 +593,7 @@ namespace Projekt_Fight_Game
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox_F1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBx_F1_User)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBx_F1_Enemy)).EndInit();
