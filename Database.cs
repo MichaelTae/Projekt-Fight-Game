@@ -13,7 +13,6 @@ namespace Projekt_Fight_Game
     public sealed class SingletonDB
     {
         private static SingletonDB dbInstance = null;
-        private static readonly object padlock = new object();
         private string conString = (@"Data Source=LAPTOP-EQLFMT99\SQLEXPRESS;Initial Catalog=DBFightGame;Integrated Security=True");
 
         private SingletonDB()
@@ -49,13 +48,7 @@ namespace Projekt_Fight_Game
             {
                 if (dbInstance == null)
                 {
-                    lock (padlock)
-                    {
-                        if (dbInstance == null)
-                        {
-                            dbInstance = new SingletonDB();
-                        }
-                    }
+                    dbInstance = new SingletonDB();
                 }
                 return dbInstance;
             }
