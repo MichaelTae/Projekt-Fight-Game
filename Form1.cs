@@ -32,18 +32,8 @@ namespace Projekt_Fight_Game
             subject.State = 0;
             subject.Notify();
 
-            
-
-           
-
-            
-
 
         }
-
-
-
-
 
 
         private void btn_F1_MyPage_Click(object sender, EventArgs e)
@@ -198,7 +188,7 @@ namespace Projekt_Fight_Game
             btn_F1_Login.Visible = false;
         }
 
-        private void btn_F1_StartGame_Click(object sender, EventArgs e)
+        private void btn_F1_Attack_Click(object sender, EventArgs e)
         {
 
             int enemyHealth = Convert.ToInt32(txt_F1_EnemyHealth.Text);

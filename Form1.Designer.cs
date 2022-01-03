@@ -61,7 +61,7 @@ namespace Projekt_Fight_Game
             this.lbl_F1_UserCharHealth = new System.Windows.Forms.Label();
             this.txt_F1_UserCharHealth = new System.Windows.Forms.TextBox();
             this.lbl_F1_UserCharHealth100 = new System.Windows.Forms.Label();
-            this.btn_F1_StartGame = new System.Windows.Forms.Button();
+            this.btn_F1_Attack = new System.Windows.Forms.Button();
             this.lbl_F1_EnemyHealth100 = new System.Windows.Forms.Label();
             this.txt_F1_EnemyHealth = new System.Windows.Forms.TextBox();
             this.lbl_F1_EnemyHealth = new System.Windows.Forms.Label();
@@ -475,21 +475,21 @@ namespace Projekt_Fight_Game
             this.lbl_F1_UserCharHealth100.TabIndex = 43;
             this.lbl_F1_UserCharHealth100.Text = "/ 100";
             // 
-            // btn_F1_StartGame
+            // btn_F1_Attack
             // 
-            this.btn_F1_StartGame.BackColor = System.Drawing.Color.SandyBrown;
-            this.btn_F1_StartGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_F1_StartGame.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_F1_StartGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_F1_StartGame.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_F1_StartGame.Location = new System.Drawing.Point(260, 531);
-            this.btn_F1_StartGame.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_F1_StartGame.Name = "btn_F1_StartGame";
-            this.btn_F1_StartGame.Size = new System.Drawing.Size(93, 28);
-            this.btn_F1_StartGame.TabIndex = 44;
-            this.btn_F1_StartGame.Text = "Start Game";
-            this.btn_F1_StartGame.UseVisualStyleBackColor = false;
-            this.btn_F1_StartGame.Click += new System.EventHandler(this.btn_F1_StartGame_Click);
+            this.btn_F1_Attack.BackColor = System.Drawing.Color.SandyBrown;
+            this.btn_F1_Attack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_F1_Attack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_F1_Attack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_F1_Attack.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_F1_Attack.Location = new System.Drawing.Point(260, 531);
+            this.btn_F1_Attack.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_F1_Attack.Name = "btn_F1_Attack";
+            this.btn_F1_Attack.Size = new System.Drawing.Size(93, 28);
+            this.btn_F1_Attack.TabIndex = 44;
+            this.btn_F1_Attack.Text = "Attack";
+            this.btn_F1_Attack.UseVisualStyleBackColor = false;
+            this.btn_F1_Attack.Click += new System.EventHandler(this.btn_F1_Attack_Click);
             // 
             // lbl_F1_EnemyHealth100
             // 
@@ -558,7 +558,7 @@ namespace Projekt_Fight_Game
             this.Controls.Add(this.lbl_F1_EnemyHealth100);
             this.Controls.Add(this.txt_F1_EnemyHealth);
             this.Controls.Add(this.lbl_F1_EnemyHealth);
-            this.Controls.Add(this.btn_F1_StartGame);
+            this.Controls.Add(this.btn_F1_Attack);
             this.Controls.Add(this.lbl_F1_UserCharHealth100);
             this.Controls.Add(this.txt_F1_UserCharHealth);
             this.Controls.Add(this.lbl_F1_UserCharHealth);
@@ -636,7 +636,7 @@ namespace Projekt_Fight_Game
         private System.Windows.Forms.Label lbl_F1_UserCharHealth;
         private System.Windows.Forms.TextBox txt_F1_UserCharHealth;
         private System.Windows.Forms.Label lbl_F1_UserCharHealth100;
-        private System.Windows.Forms.Button btn_F1_StartGame;
+        private System.Windows.Forms.Button btn_F1_Attack;
         private System.Windows.Forms.Label lbl_F1_EnemyHealth100;
         private System.Windows.Forms.TextBox txt_F1_EnemyHealth;
         private System.Windows.Forms.Label lbl_F1_EnemyHealth;
