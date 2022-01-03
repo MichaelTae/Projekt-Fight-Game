@@ -23,9 +23,9 @@ namespace Projekt_Fight_Game
             InitializeComponent();
             //NotLoggedIn();
 
-           
+            SingletonDB db = SingletonDB.Instance;
 
-            
+
             var subject = new Subject();
             var observerA = new Subscriber();
             subject.Attach(observerA);
