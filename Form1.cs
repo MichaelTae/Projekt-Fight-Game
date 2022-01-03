@@ -195,6 +195,7 @@ namespace Projekt_Fight_Game
 
             if (isEnemyCreated)
             {
+                
                 int enemyHealth = Convert.ToInt32(txt_F1_EnemyHealth.Text);
                 int myHealth = Convert.ToInt32(txt_F1_UserCharHealth.Text);
                 enemyHealth -= character.AttackDamage();
@@ -204,13 +205,14 @@ namespace Projekt_Fight_Game
 
 
                 lbx_F1.Items.Add(character.AttackDesc() + character.AttackDamage());
-                lbx_F1.Items.Add(current.AttackDesc + "for" + current.AttackDamage);
+                lbx_F1.Items.Add(current.AttackDesc + " for " + current.AttackDamage);
 
 
 
 
                 if (Convert.ToInt32(txt_F1_EnemyHealth.Text) <= 0)
                 {
+                    
                     lbx_F1.Items.Add("You Win, next enemy coming up!");
 
                     current = RandomizeEnemy();
@@ -223,8 +225,9 @@ namespace Projekt_Fight_Game
 
                 if (Convert.ToInt32(txt_F1_UserCharHealth.Text) <= 0)
                 {
+                   
                     lbx_F1.Items.Add("You Died");
-
+                    
                     Character character = new Player();
                     current = RandomizeEnemy();
                     string health = current.Health.ToString();
@@ -234,7 +237,7 @@ namespace Projekt_Fight_Game
                     lbl_F1_UserCharHealth100.Text = character.Health().ToString();
                     current = RandomizeEnemy();
 
-
+                   
                 }
 
             }
