@@ -16,7 +16,7 @@ namespace Projekt_Fight_Game
         public Form1()
         {
             InitializeComponent();
-            NotLoggedIn();
+            //NotLoggedIn();
 
             var subject = new Subject();
             var observerA = new Subscriber();
@@ -29,7 +29,9 @@ namespace Projekt_Fight_Game
 
 
             //MessageBox.Show(enemies.AttackDesc());
-            //MessageBox.Show(Convert.ToString(enemies.Health()));
+
+            //MessageBox.Show(Convert.ToString(enemies.AttackDamage()));
+
 
 
 
