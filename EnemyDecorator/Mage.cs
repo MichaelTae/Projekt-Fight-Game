@@ -18,5 +18,10 @@ namespace Projekt_Fight_Game
             return 40;
         }
 
+        public int Health()
+        {
+            return 40;
+        }
+
     }
 }

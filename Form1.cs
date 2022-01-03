@@ -16,7 +16,7 @@ namespace Projekt_Fight_Game
         public Form1()
         {
             InitializeComponent();
-            NotLoggedIn();
+            //NotLoggedIn();
 
             var subject = new Subject();
             var observerA = new Subscriber();
@@ -24,8 +24,6 @@ namespace Projekt_Fight_Game
             subject.State = 0;
             subject.Notify();
 
-
-            IEnemies enemies = RandomizeEnemy();
 
 
             //MessageBox.Show(enemies.AttackDesc());
