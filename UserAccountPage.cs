@@ -23,5 +23,25 @@ namespace Projekt_Fight_Game
             this.Hide();
             form1.Show();
         }
+
+        private void btn_UAP_CreateChar_Click(object sender, EventArgs e)
+        {
+            string weapon = cbo_UAP_CharWeapon.SelectedItem.ToString();
+            if (weapon == "Standard Sword")
+            {
+                var a = new WeaponPattern();
+                var b = new Weaponbuilder();
+                a.BuildStandardSword(b);
+
+
+            }
+            else if (weapon == "Short Dagger")
+            {
+                var a = new WeaponPattern();
+                var b = new Weaponbuilder();
+                a.ShortDagger(b);
+
+            }
+        }
     }
 }
