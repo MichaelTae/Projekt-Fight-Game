@@ -61,11 +61,11 @@ namespace Projekt_Fight_Game
             // 
             this.lbl_UAP_Header.AutoSize = true;
             this.lbl_UAP_Header.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_UAP_Header.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_UAP_Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_UAP_Header.ForeColor = System.Drawing.Color.DarkOrange;
             this.lbl_UAP_Header.Location = new System.Drawing.Point(429, 50);
             this.lbl_UAP_Header.Name = "lbl_UAP_Header";
-            this.lbl_UAP_Header.Size = new System.Drawing.Size(292, 76);
+            this.lbl_UAP_Header.Size = new System.Drawing.Size(284, 55);
             this.lbl_UAP_Header.TabIndex = 0;
             this.lbl_UAP_Header.Text = "Fight Game";
             this.lbl_UAP_Header.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -240,6 +240,7 @@ namespace Projekt_Fight_Game
             this.btn_UAP_CreateChar.TabIndex = 16;
             this.btn_UAP_CreateChar.Text = "Create";
             this.btn_UAP_CreateChar.UseVisualStyleBackColor = false;
+            this.btn_UAP_CreateChar.Click += new System.EventHandler(this.btn_UAP_CreateChar_Click);
             // 
             // btn_UAP_DeleteChar
             // 
