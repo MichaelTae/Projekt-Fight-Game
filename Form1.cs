@@ -23,7 +23,7 @@ namespace Projekt_Fight_Game
             InitializeComponent();
             //NotLoggedIn();
 
-            SingletonDB db = SingletonDB.Instance;
+            //SingletonDB db = SingletonDB.Instance;
 
 
             var subject = new Subject();
@@ -198,7 +198,7 @@ namespace Projekt_Fight_Game
             btn_F1_Login.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_F1_StartGame_Click(object sender, EventArgs e)
         {
 
             int enemyHealth = Convert.ToInt32(txt_F1_EnemyHealth.Text);
@@ -257,7 +257,7 @@ namespace Projekt_Fight_Game
             
         }
 
-        private void button_CreateEnemy_Click(object sender, EventArgs e)
+        private void btn_F1_CreateEnemy_Click(object sender, EventArgs e)
         {
             current = RandomizeEnemy();
             string health = current.Health.ToString();

@@ -61,11 +61,11 @@ namespace Projekt_Fight_Game
             // 
             this.lbl_UAP_Header.AutoSize = true;
             this.lbl_UAP_Header.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_UAP_Header.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_UAP_Header.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_UAP_Header.ForeColor = System.Drawing.Color.DarkOrange;
             this.lbl_UAP_Header.Location = new System.Drawing.Point(429, 50);
             this.lbl_UAP_Header.Name = "lbl_UAP_Header";
-            this.lbl_UAP_Header.Size = new System.Drawing.Size(284, 55);
+            this.lbl_UAP_Header.Size = new System.Drawing.Size(292, 76);
             this.lbl_UAP_Header.TabIndex = 0;
             this.lbl_UAP_Header.Text = "Fight Game";
             this.lbl_UAP_Header.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -100,6 +100,7 @@ namespace Projekt_Fight_Game
             // 
             this.txt_UAP_LoggedInAs.Location = new System.Drawing.Point(11, 25);
             this.txt_UAP_LoggedInAs.Name = "txt_UAP_LoggedInAs";
+            this.txt_UAP_LoggedInAs.ReadOnly = true;
             this.txt_UAP_LoggedInAs.Size = new System.Drawing.Size(169, 23);
             this.txt_UAP_LoggedInAs.TabIndex = 3;
             // 
@@ -132,6 +133,7 @@ namespace Projekt_Fight_Game
             // 
             this.txt_UAP_Subscription.Location = new System.Drawing.Point(12, 227);
             this.txt_UAP_Subscription.Name = "txt_UAP_Subscription";
+            this.txt_UAP_Subscription.ReadOnly = true;
             this.txt_UAP_Subscription.Size = new System.Drawing.Size(169, 23);
             this.txt_UAP_Subscription.TabIndex = 6;
             // 
@@ -300,6 +302,7 @@ namespace Projekt_Fight_Game
             // 
             this.txt_UAP_MemberSince.Location = new System.Drawing.Point(11, 288);
             this.txt_UAP_MemberSince.Name = "txt_UAP_MemberSince";
+            this.txt_UAP_MemberSince.ReadOnly = true;
             this.txt_UAP_MemberSince.Size = new System.Drawing.Size(169, 23);
             this.txt_UAP_MemberSince.TabIndex = 22;
             // 
