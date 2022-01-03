@@ -14,133 +14,35 @@ namespace Projekt_Fight_Game
     public partial class Form1 : Form
     {
         Character character = new Player();
-        IEnemies enemies = RandomizeEnemy();
+        
+        public CurrentEnemy current { get; set; }
+
+
         public Form1()
         {
             InitializeComponent();
             //NotLoggedIn();
 
+           
+
+            
             var subject = new Subject();
             var observerA = new Subscriber();
             subject.Attach(observerA);
             subject.State = 0;
             subject.Notify();
 
+            
+
+           
 
             
-            IEnemies enemies = RandomizeEnemy();
-            string health = enemies.Health().ToString();
-            lbl_F1_EnemyHealth100.Text = health;
-            txt_F1_EnemyHealth.Text = health;
-            txt_F1_UserCharHealth.Text = character.Health().ToString();
-            lbl_F1_UserCharHealth100.Text = character.Health().ToString();
+
 
         }
 
 
-        public static IEnemies RandomizeEnemy()
-        {
-            Random subClassRandom = new Random();
-            Random mainClassRnd = new Random();
-            IEnemies standardEnemies = new Warrior();
-            int myMainClass;
-            int mySubClass;
 
-            int rndNmbr = subClassRandom.Next(0,3);
-
-            for (int i = 0; i < rndNmbr; i++)
-            {
-                if (rndNmbr == 0)
-                {
-
-                    
-                    myMainClass =mainClassRnd.Next(0, 1);
-                    
-
-                    if (myMainClass == 1)
-                    {
-                        IEnemies enemies = new Warrior();
-                        return enemies;
-                    }
-                    else if(myMainClass == 0)
-                    {
-                        IEnemies enemies = new Mage();
-                        return enemies;
-                    }
-                    
-                }
-
-                else if (rndNmbr > 0)
-                {
-                    myMainClass = mainClassRnd.Next(0, 1);
-                    mySubClass = subClassRandom.Next(0, 3);
-
-                    if (myMainClass == 1)
-                    {
-                        
-                        if (mySubClass == 0)
-                        {
-                            IEnemies enemies = new Priest(new Warrior());
-                            return enemies;
-                        }
-                        else if ( mySubClass == 1)
-                        {
-                            IEnemies enemies = new Marauder(new Warrior());
-                            return enemies;
-                        }
-
-                        else if (mySubClass == 2)
-                        {
-                            IEnemies enemies = new Thief(new Warrior());
-                            return enemies;
-                        }
-
-                        else if (mySubClass == 4)
-                        {
-                            IEnemies enemies = new Rogue(new Warrior());
-                            return enemies;
-                        }
-                    }
-
-                    else if (myMainClass == 0)
-                        {
-
-                        if (mySubClass == 0)
-                        {
-                            IEnemies enemies = new Priest(new Mage());
-                            return enemies;
-                        }
-                        else if (mySubClass == 1)
-                        {
-                            IEnemies enemies = new Marauder(new Mage());
-                            return enemies;
-                        }
-
-                        else if (mySubClass == 2)
-                        {
-                            IEnemies enemies = new Thief(new Mage());
-                            return enemies;
-                        }
-
-                        else if (mySubClass == 4)
-                        {
-                            IEnemies enemies = new Rogue(new Mage());
-                            return enemies;
-                        }
-
-                   
-
-                    }
-              
-                }
-
-            
-
-            }
-
-
-            return standardEnemies;
-        }
 
 
 
@@ -150,7 +52,118 @@ namespace Projekt_Fight_Game
             this.Hide();
             userAccountPage.Show();
         }
+        public CurrentEnemy RandomizeEnemy()
+        {
+            Random subClassRandom = new Random();
+            Random mainClassRnd = new Random();
+            Random rnd = new Random();
+            IEnemies standardEnemies = new Warrior();
+            int myMainClass;
+            int mySubClass;
 
+            int rndNmbr = rnd.Next(0, 2);
+
+
+                if (rndNmbr == 0)
+                {
+
+
+                    myMainClass = mainClassRnd.Next(0, 2);
+
+
+                    if (myMainClass == 1)
+                    {
+                        IEnemies enemies = new Warrior();
+                        CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                        return ce;
+                    }
+                    else if (myMainClass == 0)
+                    {
+                        IEnemies enemies = new Mage();
+                        CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                        return ce;
+                    }
+
+                }
+
+                else if (rndNmbr > 0)
+                {
+                    myMainClass = mainClassRnd.Next(0, 1);
+                    mySubClass = subClassRandom.Next(0, 3);
+
+                    if (myMainClass == 1)
+                    {
+
+                        if (mySubClass == 0)
+                        {
+                            IEnemies enemies = new Priest(new Warrior());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+                        else if (mySubClass == 1)
+                        {
+                            IEnemies enemies = new Marauder(new Warrior());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+
+                        else if (mySubClass == 2)
+                        {
+                            IEnemies enemies = new Thief(new Warrior());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+
+                        else if (mySubClass == 3)
+                        {
+                            IEnemies enemies = new Rogue(new Warrior());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+                    }
+
+                    else if (myMainClass == 0)
+                    {
+
+                        if (mySubClass == 0)
+                        {
+                            IEnemies enemies = new Priest(new Mage());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+                        else if (mySubClass == 1)
+                        {
+                            IEnemies enemies = new Marauder(new Mage());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+
+                        else if (mySubClass == 2)
+                        {
+                            IEnemies enemies = new Thief(new Mage());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+
+                        else if (mySubClass == 3)
+                        {
+                            IEnemies enemies = new Rogue(new Mage());
+                            CurrentEnemy ce = new CurrentEnemy(enemies.AttackDamage(), enemies.Health(), enemies.AttackDesc());
+                            return ce;
+                        }
+
+
+
+                    }
+
+              
+
+               
+            }
+
+            return null;
+
+        }
         private void lbl_F1_SignUp_Click(object sender, EventArgs e)
         {
             CreateNewUser createNewUser = new CreateNewUser();
@@ -191,13 +204,13 @@ namespace Projekt_Fight_Game
             int enemyHealth = Convert.ToInt32(txt_F1_EnemyHealth.Text);
             int myHealth = Convert.ToInt32(txt_F1_UserCharHealth.Text);
             enemyHealth -= character.AttackDamage();
-            myHealth -= enemies.AttackDamage();
+            myHealth -= current.AttackDamage;
             txt_F1_EnemyHealth.Text = enemyHealth.ToString();
             txt_F1_UserCharHealth.Text = myHealth.ToString();
             
 
             lbx_F1.Items.Add(character.AttackDesc() + character.AttackDamage());
-            lbx_F1.Items.Add(enemies.AttackDesc() + "for" + enemies.AttackDamage() );
+            lbx_F1.Items.Add(current.AttackDesc + "for" + current.AttackDamage);
 
            
 
@@ -206,11 +219,11 @@ namespace Projekt_Fight_Game
             {
                 lbx_F1.Items.Add("You Win, next enemy coming up!");
 
-                IEnemies enemies = RandomizeEnemy();
-                string health = enemies.Health().ToString();
+                current = RandomizeEnemy();
+                string health = current.Health.ToString();
                 lbl_F1_EnemyHealth100.Text = health;
                 txt_F1_EnemyHealth.Text = health;
-
+               
 
             }
 
@@ -219,18 +232,19 @@ namespace Projekt_Fight_Game
                 lbx_F1.Items.Add("You Died");
 
                 Character character = new Player();
-                IEnemies enemies = RandomizeEnemy();
-                string health = enemies.Health().ToString();
+                current = RandomizeEnemy();
+                string health =current.Health.ToString();
                 lbl_F1_EnemyHealth100.Text = health;
                 txt_F1_EnemyHealth.Text = health;
                 txt_F1_UserCharHealth.Text = character.Health().ToString();
                 lbl_F1_UserCharHealth100.Text = character.Health().ToString();
-
+                current = RandomizeEnemy();
                 
 
             }
 
 
+            
 
 
 
@@ -241,6 +255,16 @@ namespace Projekt_Fight_Game
 
 
             
+        }
+
+        private void button_CreateEnemy_Click(object sender, EventArgs e)
+        {
+            current = RandomizeEnemy();
+            string health = current.Health.ToString();
+            lbl_F1_EnemyHealth100.Text = health;
+            txt_F1_EnemyHealth.Text = health;
+            txt_F1_UserCharHealth.Text = character.Health().ToString();
+            lbl_F1_UserCharHealth100.Text = character.Health().ToString();
         }
     }
 }

@@ -65,6 +65,7 @@ namespace Projekt_Fight_Game
             this.lbl_F1_EnemyHealth100 = new System.Windows.Forms.Label();
             this.txt_F1_EnemyHealth = new System.Windows.Forms.TextBox();
             this.lbl_F1_EnemyHealth = new System.Windows.Forms.Label();
+            this.button_CreateEnemy = new System.Windows.Forms.Button();
             this.groupBox_F1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBx_F1_User)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBx_F1_Enemy)).BeginInit();
@@ -498,6 +499,17 @@ namespace Projekt_Fight_Game
             this.lbl_F1_EnemyHealth.TabIndex = 45;
             this.lbl_F1_EnemyHealth.Text = "Health";
             // 
+            // button_CreateEnemy
+            // 
+            this.button_CreateEnemy.BackColor = System.Drawing.Color.SandyBrown;
+            this.button_CreateEnemy.Location = new System.Drawing.Point(1285, 901);
+            this.button_CreateEnemy.Name = "button_CreateEnemy";
+            this.button_CreateEnemy.Size = new System.Drawing.Size(118, 61);
+            this.button_CreateEnemy.TabIndex = 48;
+            this.button_CreateEnemy.Text = "Create Enemy";
+            this.button_CreateEnemy.UseVisualStyleBackColor = false;
+            this.button_CreateEnemy.Click += new System.EventHandler(this.button_CreateEnemy_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -505,6 +517,7 @@ namespace Projekt_Fight_Game
             this.BackgroundImage = global::Projekt_Fight_Game.Properties.Resources.Form1Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1684, 988);
+            this.Controls.Add(this.button_CreateEnemy);
             this.Controls.Add(this.lbl_F1_EnemyHealth100);
             this.Controls.Add(this.txt_F1_EnemyHealth);
             this.Controls.Add(this.lbl_F1_EnemyHealth);
@@ -588,6 +601,7 @@ namespace Projekt_Fight_Game
         private System.Windows.Forms.Label lbl_F1_EnemyHealth100;
         private System.Windows.Forms.TextBox txt_F1_EnemyHealth;
         private System.Windows.Forms.Label lbl_F1_EnemyHealth;
+        private System.Windows.Forms.Button button_CreateEnemy;
     }
 }
 
