@@ -27,7 +27,7 @@ namespace Projekt_Fight_Game
 
         public override int Health()
         {
-            return 105;
+            return Enemies.Health() + 105;
         }
 
 

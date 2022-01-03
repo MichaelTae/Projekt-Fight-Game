@@ -13,5 +13,7 @@ namespace Projekt_Fight_Game
 
         public int AttackDamage();
 
+        public int Health();
+
     }
 }

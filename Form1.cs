@@ -29,7 +29,7 @@ namespace Projekt_Fight_Game
 
 
             //MessageBox.Show(enemies.AttackDesc());
-            // MessageBox.Show(Convert.ToString(enemies.AttackDamage()));
+            //MessageBox.Show(Convert.ToString(enemies.Health()));
 
 
 
