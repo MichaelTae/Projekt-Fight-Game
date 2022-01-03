@@ -25,12 +25,6 @@ namespace Projekt_Fight_Game
             subject.Notify();
 
 
-            IEnemies enemies = RandomizeEnemy();
-
-
-            //MessageBox.Show(enemies.AttackDesc());
-
-            //MessageBox.Show(Convert.ToString(enemies.AttackDamage()));
 
 
 
